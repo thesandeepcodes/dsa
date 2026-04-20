@@ -2,6 +2,17 @@
 #include <vector>
 using namespace std;
 
+void reverseArray(int arr[], int size) {
+  int left = 0, right = size - 1;
+
+  while (left < right) {
+    swap(arr[left], arr[right]);
+
+    left++;
+    right--;
+  }
+}
+
 bool isPrime(int n) {
   if (n <= 1) return false;
   if (n <= 3) return true;
