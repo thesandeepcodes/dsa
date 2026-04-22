@@ -17,10 +17,15 @@
 (x > 0) && ((x & (x - 1)) == 0)
 ```
 
-| Trick       | Meaning                   |
-| ----------- | ------------------------- |
-| `x & (x-1)` | removes lowest set bit    |
-| result = 0  | only one bit → power of 2 |
+| Trick       | Meaning                                                        |
+| ----------- | -------------------------------------------------------------- |
+| `x & (x-1)` | removes lowest set bit (1s) (lowest set bit means rightmost 1) |
+| result = 0  | only one bit → power of 2                                      |
+
+Why it works:
+
+- Power of 2 → only one set bit (8 = $2^3$ = $(1000)_2$)
+- Remove it → becomes 0
 
 ## Data Type Modifiers
 
